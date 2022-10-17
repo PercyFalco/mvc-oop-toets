@@ -40,6 +40,8 @@ class Stocks extends Controller {
 
   }
   public function delete($Id) {
+    $this->stockmodel->deleteStock($Id);
+
     $data =[
       'deleteStatus' => "het record met id = $Id is gedelete"
     ];
