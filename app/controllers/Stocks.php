@@ -24,7 +24,7 @@ class Stocks extends Controller {
                   <td>" . htmlentities($value->MyAge, ENT_QUOTES, 'ISO-8859-1') . "</td>
                   <td>" . htmlentities($value->Company, ENT_QUOTES, 'ISO-8859-1') . "</td>
                   <td> <a href=' ". URLROOT . "/stocks/update/$value->id'>update</a></td>
-                  <td> <a href=' ". URLROOT . "/stocks/delete/$value->id'>delete</a></td>
+                  <td> <a href=' ". URLROOT . "/stocks/delete/$value->Id'>delete</a></td>
                 </tr>";
     }
 
@@ -38,6 +38,13 @@ class Stocks extends Controller {
 
   public function update($id) {
 
+  }
+  public function delete($Id) {
+    $data =[
+      'deleteStatus' => "het record met id = $Id is gedelete"
+    ];
+    $this->view("stocks/delete", $data);
+    header("Refresh:2; url=" . URLROOT . "/stocks/index");
   }
 }
 
