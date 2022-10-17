@@ -26,11 +26,11 @@
     }
   </style> -->
   <thead>
-    <th>id</th>
-    <th>name</th>
-    <th>total</th>
-    <th>price</th>
-    <th>cat</th>
+    <th>Id</th>
+    <th>Name</th>
+    <th>NetWorth</th>
+    <th>Age</th>
+    <th>Company</th>
     <th>update</th>
     <th>delete</th>
   </thead>
