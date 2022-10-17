@@ -18,11 +18,11 @@ class Stocks extends Controller {
     $rows = '';
     foreach ($stocks as $value){
       $rows .= "<tr>
-                  <td>$value->id</td>
-                  <td>" . htmlentities($value->name, ENT_QUOTES, 'ISO-8859-1') . "</td>
-                  <td>" . htmlentities($value->total, ENT_QUOTES, 'ISO-8859-1') . "</td>
-                  <td>" . number_format($value->price, 0, ',', '.') . "</td>
-                  <td>" . htmlentities($value->cat, ENT_QUOTES, 'ISO-8859-1') . "</td>
+                  <td>$value->Id</td>
+                  <td>" . htmlentities($value->Name, ENT_QUOTES, 'ISO-8859-1') . "</td>
+                  <td>" . htmlentities($value->NetWorth, ENT_QUOTES, 'ISO-8859-1') . "</td>
+                  <td>" . htmlentities($value->MyAge, ENT_QUOTES, 'ISO-8859-1') . "</td>
+                  <td>" . htmlentities($value->Company, ENT_QUOTES, 'ISO-8859-1') . "</td>
                   <td> <a href=' ". URLROOT . "/stocks/update/$value->id'>update</a></td>
                   <td> <a href=' ". URLROOT . "/stocks/delete/$value->id'>delete</a></td>
                 </tr>";

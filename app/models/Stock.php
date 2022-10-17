@@ -7,7 +7,7 @@
     }
 
     public function getStocks() {
-      $this->db->query("SELECT * FROM `stock`");
+      $this->db->query("SELECT * FROM `richestpeople`");
 
       $result = $this->db->resultSet();
 
